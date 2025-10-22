@@ -1,14 +1,18 @@
 import React from 'react';
-import Header from '../Header/Header';
+import Sidebar from '../Sidebar/Sidebar';
 import Footer from '../Footer/Footer';
+
+import { LayoutContainer, ContentWrapper, MainContent } from './Layout.styled';
 
 const Layout = ({ children }) => {
   return (
-    <div>
-      <Header />
-      <main>{children}</main>
+    <LayoutContainer>
+      <ContentWrapper>
+        <Sidebar />
+        <MainContent>{children}</MainContent>
+      </ContentWrapper>
       <Footer />
-    </div>
+    </LayoutContainer>
   );
 };
 
