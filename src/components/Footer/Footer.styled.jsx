@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 export const FooTer = styled.footer`
   height: 50px;
   padding: 8px;
-
-  background-color: #d62618;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #2c2c2c, #1e1e1e);
 `;
 
 export const Text = styled.p`
