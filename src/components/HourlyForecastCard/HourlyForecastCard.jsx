@@ -9,7 +9,6 @@ const HourlyForecastCard = ({ hourlyForecast }) => {
           <p>{hour.time.slice(-5)}</p>
           <img src={hour.condition.icon} alt={hour.condition.text} />
           <p>{hour.temp_c}°C</p>
-          <p>{hour.chance_of_rain}%</p>
         </li>
       ))}
     </>
