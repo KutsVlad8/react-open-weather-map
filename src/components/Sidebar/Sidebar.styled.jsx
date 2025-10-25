@@ -11,13 +11,13 @@ export const SidebarContainer = styled.div`
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* верхняя навигация + футер внизу */
+  justify-content: space-between;
 `;
 
 export const Navigation = styled.nav`
   display: flex;
-  flex-direction: column; /* вертикально */
-  gap: 15px; /* расстояние между пунктами */
+  flex-direction: column;
+  gap: 15px;
 `;
 
 export const NavigationItem = styled(NavLink)`
@@ -29,7 +29,7 @@ export const NavigationItem = styled(NavLink)`
   border-radius: 8px;
 
   &.active {
-    background-color: #333333; /* выделение активного пункта */
+    background-color: #333333;
   }
 
   &:hover {
