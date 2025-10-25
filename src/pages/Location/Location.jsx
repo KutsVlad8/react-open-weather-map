@@ -4,7 +4,7 @@ import { fetchForecastByCoords } from '../../api/fetchForecastByCoords';
 
 import LocationHeader from '../../components/LocationHeader/LocationHeader';
 import DayInfo from '../../components/DayInfo/DayInfo';
-import HourlyForecast from '../../components/HourlyForecast/HourlyForecast';
+import HourlyForecastList from '../../components/HourlyForecastList/HourlyForecastList';
 
 const Location = () => {
   const [city, setCity] = useState(null);
@@ -33,7 +33,7 @@ const Location = () => {
         <>
           <LocationHeader forecast={city} />
           <DayInfo forecast={city} />
-          <HourlyForecast forecast={city} />
+          <HourlyForecastList forecast={city} />
         </>
       ) : (
         <p>Определяем местоположение...</p>
