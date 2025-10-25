@@ -3,7 +3,7 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: 'https://api.weatherapi.com/v1/forecast.json',
 });
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+const API_KEY = 'b53de21a856b4dbb8be174612252310';
 
 export const fetchForecastByCoords = async ({ latitude, longitude }) => {
   const { data } = await api.get('', {
