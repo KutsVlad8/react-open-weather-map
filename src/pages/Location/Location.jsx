@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { getUserCoordinates } from '../../utils/getUserCoordinates';
-import { fetchCityByCoords } from '../../api/fetchCityByCoords';
+import { fetchForecastByCoords } from '../../api/fetchForecastByCoords';
+
+import LocationHeader from '../../components/LocationHeader/LocationHeader';
+import DayInfo from '../../components/DayInfo/DayInfo';
+import HourlyForecast from '../../components/HourlyForecast/HourlyForecast';
+
 const Location = () => {
   const [city, setCity] = useState(null);
   const [error, setError] = useState('');
@@ -10,7 +15,7 @@ const Location = () => {
       try {
         const coords = await getUserCoordinates();
 
-        const cityData = await fetchCityByCoords(coords);
+        const cityData = await fetchForecastByCoords(coords);
 
         setCity({ ...cityData });
       } catch (err) {
@@ -23,13 +28,13 @@ const Location = () => {
 
   return (
     <>
-      <h2>Моё местоположение</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {city ? (
-        <p>
-          Страна: {city.location.country}, Область: {city.location.region},
-          Город:{city.location.name}
-        </p>
+        <>
+          <LocationHeader forecast={city} />
+          <DayInfo forecast={city} />
+          <HourlyForecast forecast={city} />
+        </>
       ) : (
         <p>Определяем местоположение...</p>
       )}
