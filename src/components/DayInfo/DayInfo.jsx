@@ -1,9 +1,9 @@
-// import { } from './DayInfo.styled';
+import { List } from './DayInfo.styled';
 
 const DayInfo = ({ forecast }) => {
   return (
     <>
-      <ul>
+      <List>
         <li>
           <p> {forecast.forecast.forecastday[0].astro.sunrise} </p>
         </li>
@@ -34,7 +34,7 @@ const DayInfo = ({ forecast }) => {
         <li>
           <p> {forecast.forecast.forecastday[0].day.totalprecip_mm} mm</p>
         </li>
-      </ul>
+      </List>
     </>
   );
 };
