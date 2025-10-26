@@ -1,33 +1,49 @@
-import { List } from './DayInfo.styled';
+import {
+  DayInfoWrapper,
+  DayInfoList,
+  DayItem,
+  DayItemLabel,
+  DayItemValue,
+} from './DayInfo.styled';
 
 const DayInfo = ({ forecast }) => {
   return (
-    <>
-      <List>
-        <li>
-          <p> {forecast.forecast.forecastday[0].astro.sunrise} </p>
-        </li>
-
-        {/* <li>
-          <p>moon phase {forecast.forecast.forecastday[0].astro.moon_phase} </p>
-        </li> */}
-        <li>
-          <p> {forecast.forecast.forecastday[0].day.maxwind_kph} </p>
-        </li>
-        <li>
-          <p> {forecast.current.pressure_mb} </p>
-        </li>
-        <li>
-          <p> {forecast.forecast.forecastday[0].astro.sunset} </p>
-        </li>
-        <li>
-          <p> {forecast.forecast.forecastday[0].day.daily_chance_of_rain} </p>
-        </li>
-        <li>
-          <p> {forecast.forecast.forecastday[0].day.uv} </p>
-        </li>
-      </List>
-    </>
+    <DayInfoWrapper>
+      <DayInfoList>
+        <DayItem>
+          <DayItemLabel>Восход</DayItemLabel>
+          <DayItemValue>
+            {forecast.forecast.forecastday[0].astro.sunrise}
+          </DayItemValue>
+        </DayItem>
+        <DayItem>
+          <DayItemLabel>Скорость ветра</DayItemLabel>
+          <DayItemValue>
+            {forecast.forecast.forecastday[0].day.maxwind_kph} км/ч
+          </DayItemValue>
+        </DayItem>
+        <DayItem>
+          <DayItemLabel>Давление</DayItemLabel>
+          <DayItemValue> {forecast.current.pressure_mb} hPa </DayItemValue>
+        </DayItem>
+        <DayItem>
+          <DayItemLabel>Закат</DayItemLabel>
+          <DayItemValue>
+            {forecast.forecast.forecastday[0].astro.sunset}
+          </DayItemValue>
+        </DayItem>
+        <DayItem>
+          <DayItemLabel>Вероятность дождя</DayItemLabel>
+          <DayItemValue>
+            {forecast.forecast.forecastday[0].day.daily_chance_of_rain} %
+          </DayItemValue>
+        </DayItem>
+        <DayItem>
+          <DayItemLabel>УФ индекс</DayItemLabel>
+          <DayItemValue>{forecast.forecast.forecastday[0].day.uv}</DayItemValue>
+        </DayItem>
+      </DayInfoList>
+    </DayInfoWrapper>
   );
 };
 

@@ -1,12 +1,27 @@
 import styled from '@emotion/styled';
 
-export const List = styled.ul`
-  list-style: none;
+export const HourlyWeatherWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: space-between;
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px; /* Ограничиваем ширину контейнера */
+  align-items: center;
+  background: #1e213a;
+  color: #fff;
+  padding: 20px 30px;
+  margin-top: 20px;
+  height: 165px;
+  max-width: 750px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+`;
+
+export const HourlyWeatherList = styled.ul`
+  width: 750px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style: none;
+  overflow-x: auto; /* чтобы можно было скроллить при малой ширине */
 `;

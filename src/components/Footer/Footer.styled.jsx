@@ -4,7 +4,8 @@ export const FooTer = styled.footer`
   height: 50px;
   padding: 8px;
   border-radius: 10px;
-  background: linear-gradient(to bottom, #2c2c2c, #1e1e1e);
+  background: #1e213a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 `;
 
 export const Text = styled.p`

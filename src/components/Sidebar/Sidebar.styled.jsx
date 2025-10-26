@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 export const SidebarContainer = styled.div`
   width: 90px;
-  height: 76vh;
-  background: linear-gradient(to bottom, #2c2c2c, #1e1e1e);
+  height: 77vh;
+  background: #1e213a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 20px;
   margin-left: 40px;

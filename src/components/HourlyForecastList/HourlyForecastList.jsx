@@ -1,4 +1,7 @@
-import { List } from './HourlyForecastList.styled';
+import {
+  HourlyWeatherWrapper,
+  HourlyWeatherList,
+} from './HourlyForecastList.styled';
 
 import HourlyForecastCard from '../HourlyForecastCard/HourlyForecastCard';
 
@@ -8,9 +11,11 @@ const HourlyForecastList = ({ forecast }) => {
   );
 
   return (
-    <List>
-      <HourlyForecastCard hourlyForecast={hourlyForecast} />
-    </List>
+    <HourlyWeatherWrapper>
+      <HourlyWeatherList>
+        <HourlyForecastCard hourlyForecast={hourlyForecast} />
+      </HourlyWeatherList>
+    </HourlyWeatherWrapper>
   );
 };
 

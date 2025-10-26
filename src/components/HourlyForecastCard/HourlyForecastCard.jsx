@@ -1,15 +1,20 @@
-// import { } from './HourlyForecastCard.styled';
+import {
+  HourlyCard,
+  HourLabel,
+  HourIcon,
+  HourTemp,
+} from './HourlyForecastCard.styled';
 
 const HourlyForecastCard = ({ hourlyForecast }) => {
   console.log(hourlyForecast);
   return (
     <>
       {hourlyForecast.map(hour => (
-        <li key={hour.time_epoch} className="hour-block">
-          <p>{hour.time.slice(-5)}</p>
-          <img src={hour.condition.icon} alt={hour.condition.text} />
-          <p>{hour.temp_c}°C</p>
-        </li>
+        <HourlyCard key={hour.time_epoch} className="hour-block">
+          <HourLabel>{hour.time.slice(-5)}</HourLabel>
+          <HourIcon src={hour.condition.icon} alt={hour.condition.text} />
+          <HourTemp>{hour.temp_c}°C</HourTemp>
+        </HourlyCard>
       ))}
     </>
   );

@@ -1,19 +1,34 @@
-// import { } from './LocationHeader.styled';
+import {
+  HeaderWrapper,
+  Left,
+  Right,
+  City,
+  Region,
+  DateText,
+  Temp,
+  WeatherImg,
+  WeatherText,
+} from './LocationHeader.styled';
 
 const LocationHeader = ({ forecast }) => {
+  const { location, current } = forecast;
   return (
-    <>
-      <h1>{forecast.location.name}</h1> {/* город */}
-      <p>{forecast.location.region}</p> {/* регион */}
-      <p>{forecast.location.localtime}</p> {/* дата и время */}
-      <p>{forecast.current.condition.text}</p> {/* описание */}
-      <p>{forecast.current.dewpoint_c}</p> {/* градусы*/}
-      <img
-        src={forecast.current.condition.icon}
-        alt={forecast.current.condition.text}
-      />
-      {/* иконка */}
-    </>
+    <HeaderWrapper>
+      <Left>
+        <City>{location.name}</City> {/* город */}
+        <Region>{location.region}</Region> {/* регион */}
+        <DateText>{location.localtime}</DateText> {/* дата и время */}
+        <Temp>{current.dewpoint_c}°C</Temp> {/* градусы*/}
+      </Left>
+
+      <Right>
+        <WeatherImg
+          src={forecast.current.condition.icon}
+          alt={forecast.current.condition.text}
+        />
+        <WeatherText>{current.condition.text}</WeatherText> {/* описание */}
+      </Right>
+    </HeaderWrapper>
   );
 };
 
