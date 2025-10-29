@@ -6,6 +6,7 @@ import {
   Region,
   DateText,
   Temp,
+  FeelsText,
   WeatherImg,
   WeatherText,
 } from './LocationHeader.styled';
@@ -18,7 +19,9 @@ const LocationHeader = ({ forecast }) => {
         <City>{location.name}</City> {/* город */}
         <Region>{location.region}</Region> {/* регион */}
         <DateText>{location.localtime}</DateText> {/* дата и время */}
-        <Temp>{current.dewpoint_c}°C</Temp> {/* градусы*/}
+        <Temp>{current.temp_c}°C</Temp> {/* градусы*/}
+        <FeelsText>Feels like: {current.feelslike_c}</FeelsText>
+        {/* ощущается как */}
       </Left>
 
       <Right>

@@ -46,6 +46,13 @@ export const Temp = styled.p`
   margin-bottom: 0px;
 `;
 
+export const FeelsText = styled.p`
+  font-size: 0.95rem;
+  color: #bdbdbd;
+  margin-top: 4px;
+  margin-bottom: 0px;
+`;
+
 export const Right = styled.div`
   display: flex;
   flex-direction: column;
