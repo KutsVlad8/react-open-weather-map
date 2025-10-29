@@ -20,7 +20,7 @@ const LocationHeader = ({ forecast }) => {
         <Region>{location.region}</Region> {/* регион */}
         <DateText>{location.localtime}</DateText> {/* дата и время */}
         <Temp>{current.temp_c}°C</Temp> {/* градусы*/}
-        <FeelsText>Feels like: {current.feelslike_c}</FeelsText>
+        <FeelsText>Feels like: {current.feelslike_c}°C</FeelsText>
         {/* ощущается как */}
       </Left>
 
