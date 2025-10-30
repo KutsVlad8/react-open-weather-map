@@ -11,7 +11,7 @@ export const HourlyWeatherWrapper = styled.div`
   height: 165px;
   max-width: 750px;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 `;
 
 export const HourlyWeatherList = styled.ul`
