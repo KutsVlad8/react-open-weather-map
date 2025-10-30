@@ -30,12 +30,14 @@ export const City = styled.h1`
 export const Region = styled.p`
   font-size: 1rem;
   opacity: 0.8;
+  margin-top: 4px;
   margin-bottom: 0px;
 `;
 
 export const DateText = styled.p`
   font-size: 0.95rem;
   color: #bdbdbd;
+  margin-top: 4px;
   margin-bottom: 0px;
 `;
 
@@ -47,6 +49,7 @@ export const Temp = styled.p`
 `;
 
 export const FeelsText = styled.p`
+  text-align: center;
   font-size: 0.95rem;
   color: #bdbdbd;
   margin-top: 4px;
