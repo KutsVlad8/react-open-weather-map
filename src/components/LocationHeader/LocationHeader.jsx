@@ -13,14 +13,24 @@ import {
 
 const LocationHeader = ({ forecast }) => {
   const { location, current } = forecast;
+  console.log(forecast);
+  const date = new Date(forecast.forecast.forecastday[0].date);
+  const weekday = date.toLocaleDateString('en-EN', { weekday: 'short' });
+  const dataDay = date.toLocaleDateString('en-EN', {
+    day: '2-digit',
+    month: 'short',
+  });
   return (
     <HeaderWrapper>
       <Left>
         <City>{location.name}</City> {/* город */}
         <Region>{location.region}</Region> {/* регион */}
-        <DateText>{location.localtime}</DateText> {/* дата и время */}
-        <Temp>{current.temp_c}°C</Temp> {/* градусы*/}
-        <FeelsText>Feels like: {current.feelslike_c}°C</FeelsText>
+        <DateText>
+          {dataDay}, {weekday[0].toUpperCase() + weekday.slice(1)}
+        </DateText>
+        {/* дата и день недели */}
+        <Temp>{Math.round(current.temp_c)}°C</Temp> {/* градусы*/}
+        <FeelsText>Feels like: {Math.round(current.feelslike_c)}°C</FeelsText>
         {/* ощущается как */}
       </Left>
 

@@ -1,28 +1,21 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const WeatherLayout = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr; /* левый блок шире */
   gap: 20px;
-  padding: 20px;
   height: 100%;
   box-sizing: border-box;
 `;
 
-export const CurrentWeather = styled.div`
-  background: #1e2533;
-  border-radius: 20px;
-  padding: 30px;
+export const DayForecast = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 
 export const WeekForecast = styled.div`
-  background: #1e2533;
-  border-radius: 20px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 `;

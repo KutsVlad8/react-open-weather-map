@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.div`
   height: 200px;
   max-width: 750px;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 `;
 
 export const Left = styled.div`
