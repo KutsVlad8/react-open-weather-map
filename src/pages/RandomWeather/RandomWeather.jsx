@@ -4,18 +4,15 @@ import { fetchRandomWeather } from '../../api/fetchForecast';
 import WeatherList from '../../components/WeatherList/WeatherList';
 
 const RandomWeather = () => {
-  // const [randomCityWeather, setrandomCityWeather] = useState([]);
+  const [randomCityWeather, setrandomCityWeather] = useState([]);
   const [error, setError] = useState(' ');
 
   useEffect(() => {
     const fetchWeather = async () => {
       try {
         const randomCities = cities.sort(() => 0.5 - Math.random()).slice(0, 8);
-        console.log(randomCities);
-
         const data = await fetchRandomWeather(randomCities);
-        console.log(data);
-        // setrandomCityWeather(data);
+        setrandomCityWeather(data);
       } catch (err) {
         setError(err.message);
       }
@@ -24,7 +21,7 @@ const RandomWeather = () => {
     fetchWeather();
   }, []);
 
-  // console.log(randomCityWeather);
+  console.log(randomCityWeather);
 
   return (
     <div>
