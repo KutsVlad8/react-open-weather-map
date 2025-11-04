@@ -4,9 +4,9 @@ import {
   DayItem,
   DayItemLabel,
   DayItemValue,
-} from './DayInfo.styled';
+} from './DayWeather.styled';
 
-const DayInfo = ({ forecast }) => {
+const DayWeather = ({ forecast }) => {
   return (
     <DayInfoWrapper>
       <DayInfoList>
@@ -47,4 +47,4 @@ const DayInfo = ({ forecast }) => {
   );
 };
 
-export default DayInfo;
+export default DayWeather;
