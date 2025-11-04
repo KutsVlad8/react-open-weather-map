@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getUserCoordinates } from '../../utils/getUserCoordinates';
-import { fetchForecastByCoords } from '../../api/fetchForecastByCoords';
+import { fetchForecastByCoords } from '../../api/fetchForecast';
 
 import LocationHeader from '../../components/LocationHeader/LocationHeader';
 import DayInfo from '../../components/DayInfo/DayInfo';
