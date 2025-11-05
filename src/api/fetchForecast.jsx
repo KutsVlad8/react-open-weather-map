@@ -39,6 +39,6 @@ export const fetchRandomWeather = async cityArray => {
     return responses.map(res => res.data);
   } catch (error) {
     console.error('Error fetching random weather:', error);
-    return [];
+    return null;
   }
 };
