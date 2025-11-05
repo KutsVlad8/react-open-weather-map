@@ -5,7 +5,7 @@ import { Title } from './RandomWeather.styled';
 import WeatherList from '../../components/WeatherList/WeatherList';
 
 const RandomWeather = () => {
-  const [randomCityWeather, setrandomCityWeather] = useState([]);
+  const [randomCityWeather, setrandomCityWeather] = useState(null);
   const [error, setError] = useState(' ');
 
   useEffect(() => {
@@ -24,9 +24,14 @@ const RandomWeather = () => {
   return (
     <>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <Title>Random Weather</Title>
-
-      <WeatherList cityWeather={randomCityWeather} />
+      {randomCityWeather ? (
+        <>
+          <Title>Random Weather</Title>
+          <WeatherList cityWeather={randomCityWeather} />
+        </>
+      ) : (
+        <p>загружаем города...</p>
+      )}
     </>
   );
 };

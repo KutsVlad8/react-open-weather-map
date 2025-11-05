@@ -13,7 +13,6 @@ import {
 // import capitalizeFirstLetter from '../../utils/capitalizeFirstLetter';
 
 const WeatherCard = ({ cityWeather }) => {
-  console.log(cityWeather);
   return (
     <>
       {cityWeather.map(city => (
