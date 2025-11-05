@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import cities from '../../utils/cities.json';
 import { fetchRandomWeather } from '../../api/fetchForecast';
+import { Title } from './RandomWeather.styled';
 import WeatherList from '../../components/WeatherList/WeatherList';
 
 const RandomWeather = () => {
@@ -20,16 +21,13 @@ const RandomWeather = () => {
 
     fetchWeather();
   }, []);
-
-  console.log(randomCityWeather);
-
   return (
-    <div>
+    <>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <h1>Random Weather</h1>
+      <Title>Random Weather</Title>
 
-      <WeatherList />
-    </div>
+      <WeatherList cityWeather={randomCityWeather} />
+    </>
   );
 };
 export default RandomWeather;
