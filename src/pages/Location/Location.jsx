@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getUserCoordinates } from '../../utils/getUserCoordinates';
-import { fetchForecastByCoords } from '../../api/fetchForecastByCoords';
+import { fetchForecastByCoords } from '../../api/fetchForecast';
 
 import { WeatherLayout, DayForecast, WeekForecast } from './Location.styled';
 

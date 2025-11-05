@@ -14,6 +14,6 @@ export const ContentWrapper = styled.div`
 export const MainContent = styled.main`
   flex: 1;
   padding: 20px;
-  margin-left: 20px;
+  // margin-left: 20px;
   overflow-y: auto;
 `;

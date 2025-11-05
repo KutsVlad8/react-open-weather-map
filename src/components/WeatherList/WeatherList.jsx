@@ -1,13 +1,10 @@
 import WeatherCard from '../WeatherCard/WeatherCard';
 import { List } from './WeatherList.styled';
 
-const WeatherList = () => {
+const WeatherList = ({ cityWeather }) => {
   return (
     <List>
-      <WeatherCard />
-      <WeatherCard />
-      <WeatherCard />
-      <WeatherCard />
+      <WeatherCard cityWeather={cityWeather} />
     </List>
   );
 };
