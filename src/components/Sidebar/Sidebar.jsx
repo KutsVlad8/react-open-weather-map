@@ -7,7 +7,7 @@ const Sidebar = () => {
         <NavigationItem to="/">Random Weather</NavigationItem>
         <NavigationItem to="/Location">Current Location</NavigationItem>
         <NavigationItem to="/Search">Search </NavigationItem>
-        <NavigationItem to="/Cities">Cities</NavigationItem>
+        {/* <NavigationItem to="/Cities">Cities</NavigationItem> */}
       </Navigation>
     </SidebarContainer>
   );
