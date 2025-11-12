@@ -49,7 +49,6 @@ export const Temp = styled.p`
 `;
 
 export const FeelsText = styled.p`
-  text-align: center;
   font-size: 0.95rem;
   color: #bdbdbd;
   margin-top: 4px;
