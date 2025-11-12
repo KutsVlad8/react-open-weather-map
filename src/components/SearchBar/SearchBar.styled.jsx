@@ -11,7 +11,7 @@ export const SearchForm = styled.form`
   margin: 0 auto;
   margin-top: 20px;
 
-  background: linear-gradient(to bottom, #2c2c2c, #1e1e1e);
+  background: #1e213a;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
