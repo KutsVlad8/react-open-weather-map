@@ -29,6 +29,8 @@ const Location = () => {
     fetchLocation();
   }, []);
 
+  console.log(city);
+
   return (
     <>
       {error && <p style={{ color: 'red' }}>{error}</p>}
