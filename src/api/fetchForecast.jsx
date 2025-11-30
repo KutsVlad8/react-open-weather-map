@@ -32,7 +32,7 @@ export const fetchForecastByCity = async city => {
     params: {
       key: API_KEY,
       q: `${city}`,
-      days: 7,
+      days: 1,
       lang: 'en',
     },
   });
