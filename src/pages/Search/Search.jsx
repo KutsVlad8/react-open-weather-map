@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import SearcCity from '@components/SearchCity/SearchCity';
+import SearcCity from '../../components/SearchCity/SearchCity';
 
 import { fetchForecastByCity } from '../../api/fetchForecast';
 
@@ -28,24 +28,23 @@ const Search = () => {
     fetchData();
   }, [city]);
 
-  console.log('Город:', city);
-  console.log('Погода:', weather);
+  // console.log('Город:', city);
+  // console.log('Погода:', weather);
 
   return (
     <>
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
       <SearchBar onSearch={handleSearch} />
+
+      {/* <SearcCity cityWeather={weather} /> */}
       {weather ? (
         <>
-          <h1>{weather.location.name}</h1>
-          <h2>{weather.location.country}</h2>
+          <SearcCity cityWeather={weather} />
         </>
       ) : (
-        <p>загружаем города...</p>
+        <p>enter city to search...</p>
       )}
-
-      <SearcCity></SearcCity>
     </>
   );
 };
