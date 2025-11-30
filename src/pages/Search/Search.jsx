@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import SearcCity from '@components/SearchCity/SearchCity';
 
 import { fetchForecastByCity } from '../../api/fetchForecast';
 
@@ -43,6 +44,8 @@ const Search = () => {
       ) : (
         <p>загружаем города...</p>
       )}
+
+      <SearcCity></SearcCity>
     </>
   );
 };
