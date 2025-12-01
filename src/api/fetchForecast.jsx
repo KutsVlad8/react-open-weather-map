@@ -10,13 +10,28 @@ const apiRandomForecast = axios.create({
 
 const API_KEY = 'b53de21a856b4dbb8be174612252310';
 
-// != Запрос на погоду по коорданатам
+// !!! Запрос на погоду по коорданатам
 
 export const fetchForecastByCoords = async ({ latitude, longitude }) => {
   const { data } = await apiForecast.get('', {
     params: {
       key: API_KEY,
       q: `${latitude},${longitude}`,
+      days: 7,
+      lang: 'en',
+    },
+  });
+
+  return { ...data };
+};
+
+// !!! Запрос на погоду по названию города
+
+export const fetchForecastByCity = async city => {
+  const { data } = await apiForecast.get('', {
+    params: {
+      key: API_KEY,
+      q: `${city}`,
       days: 7,
       lang: 'en',
     },

@@ -10,8 +10,6 @@ import {
   Condition,
 } from './WeatherCard.styled';
 
-// import capitalizeFirstLetter from '../../utils/capitalizeFirstLetter';
-
 const WeatherCard = ({ cityWeather }) => {
   return (
     <>
@@ -21,7 +19,7 @@ const WeatherCard = ({ cityWeather }) => {
             <City>{city.location.name}</City>
             <Country>{city.location.country}</Country>
             <Temp>{city.current.temp_c}°C</Temp>
-            <FeelsLike>Feels like:{city.current.feelslike_c}°C</FeelsLike>
+            <FeelsLike>Feels like: {city.current.feelslike_c}°C</FeelsLike>
           </Left>
 
           <Right>
