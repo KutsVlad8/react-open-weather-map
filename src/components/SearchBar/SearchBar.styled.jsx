@@ -5,10 +5,10 @@ export const SearchForm = styled.form`
   align-items: center;
 
   width: 100%;
-  max-width: 600px;
+  max-width: 750px;
 
   padding: 10px 20px;
-  margin: 0 auto;
+  // margin: 0 auto;
   margin-top: 20px;
 
   background: #1e213a;

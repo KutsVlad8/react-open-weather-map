@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import SearcCity from '../../components/SearchCity/SearchCity';
+// import SearcCity from '../../components/SearchCity/SearchCity';
+import LocationHeader from '../../components/LocationHeader/LocationHeader';
+import DayWeather from '../../components/DayWeather/DayWeather';
+import HourlyForecastList from '../../components/HourlyForecastList/HourlyForecastList';
+import WeekWeather from '../../components/WeekWeather/WeekWeather';
 
+import {
+  WeatherLayout,
+  DayForecast,
+  WeekForecast,
+  EnterText,
+} from './Search.styled';
 import { fetchForecastByCity } from '../../api/fetchForecast';
 
 const Search = () => {
@@ -37,13 +47,22 @@ const Search = () => {
 
       <SearchBar onSearch={handleSearch} />
 
-      {/* <SearcCity cityWeather={weather} /> */}
       {weather ? (
         <>
-          <SearcCity cityWeather={weather} />
+          <WeatherLayout>
+            <DayForecast>
+              <LocationHeader forecast={weather} />
+              <DayWeather forecast={weather} />
+              <HourlyForecastList forecast={weather} />
+            </DayForecast>
+            <WeekForecast>
+              <WeekWeather forecast={weather} />
+            </WeekForecast>
+          </WeatherLayout>
+          {/* <SearcCity cityWeather={weather} /> */}
         </>
       ) : (
-        <p>enter city to search...</p>
+        <EnterText>enter city to search...</EnterText>
       )}
     </>
   );
